@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rando generator</title>
+	{% load static%}
+</head>
+<body>
+	<h1>Random Word (attempt # {{request.session.attempt}})</h1>
+	<p>{{rword}}</p>
+	<form action="/" method="post">
+		{%csrf_token %}
+		<input type="submit" name="newRand" value="Generate">
+	</form>
+
+</body>
+</html>
